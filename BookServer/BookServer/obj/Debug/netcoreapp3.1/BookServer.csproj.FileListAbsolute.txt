@@ -1,0 +1,5 @@
+/Users/bailey/Projects/bookorganizer/BookServer/BookServer/obj/Debug/netcoreapp3.1/BookServer.csprojAssemblyReference.cache
+/Users/bailey/Projects/bookorganizer/BookServer/BookServer/obj/Debug/netcoreapp3.1/BookServer.AssemblyInfoInputs.cache
+/Users/bailey/Projects/bookorganizer/BookServer/BookServer/obj/Debug/netcoreapp3.1/BookServer.AssemblyInfo.cs
+/Users/bailey/Projects/bookorganizer/BookServer/BookServer/obj/Debug/netcoreapp3.1/BookServer.csproj.CoreCompileInputs.cache
+/Users/bailey/Projects/bookorganizer/BookServer/BookServer/obj/Debug/netcoreapp3.1/BookServer.MvcApplicationPartsAssemblyInfo.cache

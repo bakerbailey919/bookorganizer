@@ -1,10 +1,12 @@
 <template>
-  <footer></footer>
+  <footer>
+    <h5 class="title">All Rights Reserved 2020</h5>
+  </footer>
 </template>
 
 <script>
 export default {
-  name: "AppFooter",
+  name: 'AppFooter',
   data() {
     return {};
   },
@@ -13,10 +15,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-header {
+footer {
   height: 86px;
-  color: #81888b;
+  background-color: #f3f3f3;
+  color: #444444;
   grid-area: navBar;
   text-align: center;
+  -webkit-box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 </style>
