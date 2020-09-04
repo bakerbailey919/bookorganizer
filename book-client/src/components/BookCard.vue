@@ -2,7 +2,7 @@
   <div class="card" style="width: 25rem;">
     <div class="flex-card-header-container">
       <div class="card-body">
-        <h5 class="card-title">{{ book.title }}</h5>
+        <h5 class="card-title">Title: {{ book.title }}</h5>
         <p class="card-text">Id: {{ book.bookId }}</p>
         <p class="card-text">Description: {{ book.description }}</p>
       </div>

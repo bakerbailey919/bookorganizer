@@ -1,24 +1,41 @@
 <template>
   <header>
-    <nav class="navbar navbar-light fixed-top">
-      <router-link v-bind:to="{ name: 'home' }" class="navbar-brand" href="#">
-      </router-link>
+    <nav>
       <div class="nav-buttons">
-        <router-link v-bind:to="{ name: 'home' }" exact>Home</router-link>
-        <router-link v-bind:to="{ name: 'register' }" v-if="!$store.state.token"
-          >&nbsp;|&nbsp;Register</router-link
+        <md-display-4>BookLand</md-display-4>
+        <md-button v-bind:to="{ name: 'home' }" exact class="md-accent"
+          >Home</md-button
         >
-        <router-link v-bind:to="{ name: 'login' }" v-if="!$store.state.token"
-          >&nbsp;|&nbsp;Login</router-link
+        <md-button
+          v-bind:to="{ name: 'register' }"
+          exact
+          class="md-accent"
+          v-if="!$store.state.token"
+          >Register</md-button
         >
-        <router-link v-bind:to="{ name: 'logout' }" v-if="$store.state.token"
-          >&nbsp;|&nbsp;Logout</router-link
+        <md-button
+          v-bind:to="{ name: 'login' }"
+          exact
+          class="md-accent"
+          v-if="!$store.state.token"
+          >Login</md-button
         >
-        <router-link v-bind:to="{ name: 'mybooks' }" v-if="!$store.state.token"
-          >&nbsp;|&nbsp;My Books</router-link
+        <md-button
+          v-bind:to="{ name: 'logout' }"
+          exact
+          class="md-accent"
+          v-if="$store.state.token"
+          >Logout</md-button
         >
-        <router-link v-bind:to="{ name: 'browse' }" v-if="!$store.state.token"
-          >&nbsp;|&nbsp;Browse</router-link
+        <md-button
+          v-bind:to="{ name: 'mybooks' }"
+          exact
+          class="md-accent"
+          v-if="$store.state.token"
+          >My Books</md-button
+        >
+        <md-button v-bind:to="{ name: 'browse' }" exact class="md-accent"
+          >Browse</md-button
         >
       </div>
     </nav>

@@ -13,7 +13,7 @@ Vue.use(MdTabs);
 
 Vue.config.productionTip = false;
 
-axios.defaults.baseURL = process.env.VUE_APP_REMOTE_API;
+axios.defaults.baseURL = 'http://localhost:5000/api/v1';
 
 new Vue({
   router,

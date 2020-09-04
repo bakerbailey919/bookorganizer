@@ -39,9 +39,9 @@
       <div class="form-group">
         <router-link :to="{ name: 'login' }">Have an account?</router-link>
       </div>
-      <button class="btn btn-primary" type="submit">
+      <md-button class="md-primary md-raised" v-on:click="register()">
         Create Account
-      </button>
+      </md-button>
     </form>
   </div>
 </template>
@@ -57,7 +57,6 @@ export default {
         username: '',
         password: '',
         confirmPassword: '',
-        role: 'user',
       },
       registrationErrors: false,
       registrationErrorMsg: 'There were problems registering this user.',
@@ -82,6 +81,7 @@ export default {
           .catch((error) => {
             const response = error.response;
             this.registrationErrors = true;
+            console.log(error);
             if (response.status === 400) {
               this.registrationErrorMsg = 'Bad Request: Validation Errors';
             }

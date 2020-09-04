@@ -3,7 +3,7 @@ using BookServer.Security.Models;
 using System;
 using System.Security.Cryptography;
 
-namespace Capstone.Security
+namespace BookServer.Security
 {
     /// <summary>
     /// The hash provider provides functionality to hash a plain text password and validate

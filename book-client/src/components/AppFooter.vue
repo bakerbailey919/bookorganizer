@@ -1,7 +1,5 @@
 <template>
-  <footer>
-    <h5 class="title">All Rights Reserved 2020</h5>
-  </footer>
+  <footer></footer>
 </template>
 
 <script>
@@ -21,9 +19,7 @@ footer {
   color: #444444;
   grid-area: navBar;
   text-align: center;
-  -webkit-box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 -4px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   position: relative;
 }
 </style>

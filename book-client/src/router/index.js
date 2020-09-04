@@ -46,11 +46,11 @@ const router = new Router({
       },
     },
     {
-      path: '/book',
-      name: 'book',
+      path: '/mybooks',
+      name: 'mybooks',
       component: BookList,
       meta: {
-        requiresAuth: false,
+        requiresAuth: true,
       },
     },
     {

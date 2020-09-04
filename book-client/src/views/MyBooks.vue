@@ -1,0 +1,18 @@
+<template>
+  <div class="books">
+    <book-list />
+  </div>
+</template>
+
+<script>
+import BookList from '../components/BookList.vue';
+
+export default {
+  name: 'home',
+  components: {
+    BookList,
+  },
+};
+</script>
+
+<style scoped></style>

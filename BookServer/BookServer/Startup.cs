@@ -28,6 +28,8 @@ namespace BookServer
             //added for dependency injection
             string connectionString = Configuration.GetConnectionString("BookDatabase");
 
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
             var key = Encoding.ASCII.GetBytes(Configuration["JwtSecret"]);
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap[JwtRegisteredClaimNames.Sub] = "sub";
             services.AddAuthentication(x =>
@@ -53,9 +55,18 @@ namespace BookServer
 
             services.AddSingleton<ITokenGenerator>(tk => new JwtGenerator(Configuration["JwtSecret"]));
             services.AddSingleton<IPasswordHasher>(ph => new PasswordHasher());
-            services.AddTransient<IBookDAO, BookSqlDAO>(m => new BookSqlDAO(connectionString));
+            services.AddTransient<IBookDAO>(m => new BookSqlDAO(connectionString));
+            services.AddTransient<IUserDAO>(m => new UserSqlDAO(connectionString));
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                    });
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -70,6 +81,7 @@ namespace BookServer
                 app.UseHsts();
             }
 
+            app.UseCors();
             app.UseAuthentication();
             app.UseHttpsRedirection();
             app.UseMvc();

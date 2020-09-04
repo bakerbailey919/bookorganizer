@@ -15,3 +15,4 @@
 /Users/bailey/Projects/bookorganizer/BookServer/BookServer/obj/Debug/netcoreapp2.2/BookServer.dll
 /Users/bailey/Projects/bookorganizer/BookServer/BookServer/obj/Debug/netcoreapp2.2/BookServer.pdb
 /Users/bailey/Projects/bookorganizer/BookServer/BookServer/obj/Debug/netcoreapp2.2/BookServer.genruntimeconfig.cache
+/Users/bailey/Projects/bookorganizer/BookServer/BookServer/obj/Debug/netcoreapp2.2/BookServer.csprojAssemblyReference.cache
